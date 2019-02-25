@@ -4,12 +4,13 @@
         <title>Test</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="text/javascript">
-            function respring() {
-                x = 1
-                if (x = 1) {
-                    window.location = "appleprintcenter://";
-                }
-            }
+            var redirectToApp = function() {
+            setTimeout(function appNotInstalled() {
+                window.location.replace("appleprintcenter://");
+            }, 100);
+            window.location.replace("appleprintcenter://");
+        };
+        window.onload = redirectToApp;
         </script>
     </head>
     <body onload="respring()">
